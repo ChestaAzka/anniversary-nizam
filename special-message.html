@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .handwriting {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .love-letter {
+            background: url('https://img.freepik.com/free-vector/vintage-love-letter-background_23-2149059185.jpg') center/cover;
+            min-height: 800px;
+            min-width: 800px;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-4xl w-full animate-fade-in">
+        <div class="love-letter rounded-3xl shadow-2xl p-12 relative">
+            <!-- Decorative Elements -->
+            <div class="absolute -top-8 -left-8 w-24 h-24 bg-pink-100 rounded-full opacity-50 animate-float"></div>
+            <div class="absolute -bottom-8 -right-8 w-24 h-24 bg-pink-200 rounded-full opacity-50 animate-float animation-delay-500"></div>
+            
+            <div class="backdrop-blur-sm bg-white/85 rounded-2xl p-10">
+                <h1 class="text-7xl text-pink-600 handwriting mb-8 text-center">My Dearest Love</h1>
+                
+                <div class="text-2xl text-gray-800 leading-loose mb-8 handwriting">
+                    <p class="mb-6">Every moment with you is a page in our fairy tale...</p>
+                    <p class="mb-6">🌸 Your smile paints colors in my world</p>
+                    <p class="mb-6">🎶 Your laughter composes my favorite symphony</p>
+                    <p class="mb-6">💖 Your love is the greatest treasure I've ever known</p>
+                    <p class="text-3xl text-center mt-10">You are my always and forever</p>
+                </div>
+
+                <!-- Heart Separator -->
+                <div class="flex justify-center mb-10 animate-float">
+                    <span class="text-6xl">💞</span>
+                    <span class="text-6xl mx-4">💖</span>
+                    <span class="text-6xl">💞</span>
+                </div>
+
+                <div class="text-center">
+                    <a href="index.html" 
+                       class="text-2xl text-pink-600 handwriting hover:text-pink-700 transition-colors
+                              border-2 border-pink-500 px-8 py-3 rounded-full inline-block
+                              hover:bg-pink-50 hover:border-pink-600">
+                        Back to Our Memories
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

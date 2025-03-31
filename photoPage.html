@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .handwriting {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .text-link {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .text-link:hover {
+            transform: translateY(-2px);
+            text-shadow: 0 2px 4px rgba(236, 72, 153, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-pink-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-6xl text-center text-pink-600 handwriting mb-8">
+            You & Me
+            <span class="text-4xl block mt-2">Since 2022</span>
+        </h1>
+
+        <!-- Photo Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+            <!-- Photo Card 1 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-1" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+
+            <!-- Photo Card 2 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-2" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+
+            <!-- Photo Card 3 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-3" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+
+            <!-- Photo Card 4 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-4" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+
+            <!-- Photo Card 5 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-5" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+
+            <!-- Photo Card 6 -->
+            <div class="group relative rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <img src="https://source.unsplash.com/600x800/?couple-6" 
+                     class="w-full h-80 object-cover transform transition duration-500 group-hover:scale-110">
+            </div>
+        </div>
+            <!-- ... -->
+        </div>
+
+        <!-- Text Link Section -->
+        <div class="text-center py-8 animate-float">
+            <a href="special-message.html" class="text-2xl text-pink-600 handwriting text-link">
+                I'm so lucky to have you ❤️
+                <span class="block text-xl mt-2 text-pink-400">Click to continue our story</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
