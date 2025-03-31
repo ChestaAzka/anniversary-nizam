@@ -14,7 +14,7 @@
         
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-5px); }
             100% { transform: translateY(0px); }
         }
 
@@ -24,8 +24,8 @@
 
         .love-letter {
             background: url('https://img.freepik.com/free-vector/vintage-love-letter-background_23-2149059185.jpg') center/cover;
-            min-height: 800px;
-            min-width: 800px;
+            min-height: 90vh;
+            min-width: 90vw;
         }
 
         .animate-fade-in {
@@ -35,37 +35,53 @@
         .animate-float {
             animation: float 3s ease-in-out infinite;
         }
+
+        @media (max-width: 768px) {
+            .love-letter {
+                min-height: 95vh;
+                min-width: 95vw;
+                padding: 1.5rem;
+            }
+            
+            .decorative-circle {
+                display: none;
+            }
+        }
     </style>
 </head>
-<body class="bg-pink-50 min-h-screen flex items-center justify-center p-4">
-    <div class="max-w-4xl w-full animate-fade-in">
-        <div class="love-letter rounded-3xl shadow-2xl p-12 relative">
+<body class="bg-pink-50 min-h-screen flex items-center justify-center p-2 sm:p-4">
+    <div class="max-w-4xl w-full mx-4 animate-fade-in">
+        <div class="love-letter rounded-xl md:rounded-3xl shadow-xl md:shadow-2xl p-4 md:p-8 lg:p-12 relative">
             <!-- Decorative Elements -->
-            <div class="absolute -top-8 -left-8 w-24 h-24 bg-pink-100 rounded-full opacity-50 animate-float"></div>
-            <div class="absolute -bottom-8 -right-8 w-24 h-24 bg-pink-200 rounded-full opacity-50 animate-float animation-delay-500"></div>
+            <div class="decorative-circle absolute -top-4 md:-top-8 -left-4 md:-left-8 w-12 h-12 md:w-24 md:h-24 bg-pink-100 rounded-full opacity-50 animate-float"></div>
+            <div class="decorative-circle absolute -bottom-4 md:-bottom-8 -right-4 md:-right-8 w-12 h-12 md:w-24 md:h-24 bg-pink-200 rounded-full opacity-50 animate-float md:animation-delay-500"></div>
             
-            <div class="backdrop-blur-sm bg-white/85 rounded-2xl p-10">
-                <h1 class="text-7xl text-pink-600 handwriting mb-8 text-center">My Dearest Love</h1>
+            <div class="backdrop-blur-sm bg-white/85 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-10">
+                <h1 class="text-4xl md:text-5xl lg:text-7xl text-pink-600 handwriting mb-4 md:mb-8 text-center">
+                    My Dearest Love
+                </h1>
                 
-                <div class="text-2xl text-gray-800 leading-loose mb-8 handwriting">
-                    <p class="mb-6">Every moment with you is a page in our fairy tale...</p>
-                    <p class="mb-6">🌸 Your smile paints colors in my world</p>
-                    <p class="mb-6">🎶 Your laughter composes my favorite symphony</p>
-                    <p class="mb-6">💖 Your love is the greatest treasure I've ever known</p>
-                    <p class="text-3xl text-center mt-10">You are my always and forever</p>
+                <div class="text-lg md:text-xl lg:text-2xl text-gray-800 leading-relaxed md:leading-loose mb-4 md:mb-8 handwriting">
+                    <p class="mb-3 md:mb-6">Every moment with you is a page in our fairy tale...</p>
+                    <p class="mb-3 md:mb-6">🌸 Your smile paints colors in my world</p>
+                    <p class="mb-3 md:mb-6">🎶 Your laughter composes my favorite symphony</p>
+                    <p class="mb-3 md:mb-6">💖 Your love is the greatest treasure I've ever known</p>
+                    <p class="text-xl md:text-2xl lg:text-3xl text-center mt-6 md:mt-10">
+                        You are my always and forever
+                    </p>
                 </div>
 
                 <!-- Heart Separator -->
-                <div class="flex justify-center mb-10 animate-float">
-                    <span class="text-6xl">💞</span>
-                    <span class="text-6xl mx-4">💖</span>
-                    <span class="text-6xl">💞</span>
+                <div class="flex justify-center mb-6 md:mb-10 animate-float">
+                    <span class="text-4xl md:text-6xl">💞</span>
+                    <span class="text-4xl md:text-6xl mx-2 md:mx-4">💖</span>
+                    <span class="text-4xl md:text-6xl">💞</span>
                 </div>
 
                 <div class="text-center">
                     <a href="index.html" 
-                       class="text-2xl text-pink-600 handwriting hover:text-pink-700 transition-colors
-                              border-2 border-pink-500 px-8 py-3 rounded-full inline-block
+                       class="text-lg md:text-xl lg:text-2xl text-pink-600 handwriting hover:text-pink-700 transition-colors
+                              border-2 border-pink-500 px-4 py-2 md:px-8 md:py-3 rounded-full inline-block
                               hover:bg-pink-50 hover:border-pink-600">
                         Back to Our Memories
                     </a>
